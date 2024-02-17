@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 1231358544723336000}
   - component: {fileID: 1231358544723336015}
   m_Layer: 0
-  m_Name: HuaYao_01
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
