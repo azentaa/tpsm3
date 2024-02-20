@@ -59,5 +59,9 @@ public class EnemyAI : MonoBehaviour
         {
             _navMeshAgent.destination = player.transform.position;
         }
+        if (_navMeshAgent.remainingDistance == 12)
+        {
+            _navMeshAgent.isStopped = true;
+        }
     }
 }

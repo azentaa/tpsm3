@@ -7,6 +7,8 @@ public class Fireball : MonoBehaviour
 {
     public int speed;
     public float lifeTime;
+    public float damage;
+    public EnemyHealth health;
 
     private void Start()
     {
@@ -21,6 +23,11 @@ public class Fireball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.DealDamage();
+        }
         DestroyFireball();
     }
 
