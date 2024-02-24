@@ -26,7 +26,7 @@ public class Fireball : MonoBehaviour
         var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.DealDamage();
+            enemyHealth.DealDamage(damage);
         }
         DestroyFireball();
     }
