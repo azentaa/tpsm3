@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
     public int speed;
-    public float lifeTime;
+    public float lifeTime = 5.0f;
     public float damage;
-    public EnemyHealth health;
 
     private void Start()
     {

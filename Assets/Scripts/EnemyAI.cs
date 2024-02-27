@@ -30,7 +30,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!_isPlayerNoticed)
         {
-            if (_navMeshAgent.remainingDistance == 0)
+            if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
             {
                 PickPoint();
             }
@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         {
             _navMeshAgent.destination = player.transform.position;
         }
-        if (_navMeshAgent.remainingDistance == 12)
+        if (_navMeshAgent.remainingDistance == 0)
         {
             _navMeshAgent.isStopped = true;
         }
