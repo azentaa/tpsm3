@@ -20,8 +20,7 @@ public class Fireball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
+        if (other.transform.root.TryGetComponent(out EnemyHealth enemyHealth))
         {
             enemyHealth.DealDamage(damage);
         }

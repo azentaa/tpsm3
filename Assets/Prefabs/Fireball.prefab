@@ -126,3 +126,5 @@ MonoBehaviour:
   speed: 4
   lifeTime: 5
   damage: 100
+  direction: {fileID: 831928930425297824, guid: eb0845be0d87da84388be00f868a1d80,
+    type: 3}
