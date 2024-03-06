@@ -7,12 +7,12 @@ public class PlayerHealth : MonoBehaviour
     public RectTransform valueRectTransform;
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
-    private float _maxHealth;
+    public float maxHealth;
     
 
     private void Start()
     {
-        _maxHealth = health;
+        maxHealth = health;
         DrawHealthBar();
     }
 
@@ -26,9 +26,9 @@ public class PlayerHealth : MonoBehaviour
         DrawHealthBar();
     }
 
-    private void DrawHealthBar()
+    public void DrawHealthBar()
     {
-        valueRectTransform.anchorMax = new Vector2(health/_maxHealth,1);
+        valueRectTransform.anchorMax = new Vector2(health/maxHealth,1);
     }
 
     private void Dead()
