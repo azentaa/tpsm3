@@ -10,7 +10,7 @@ public class FireballCaster : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(fireballPrefab, fireballSourceTransform.position, transform.rotation);
+            Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
         }
     }
 }
