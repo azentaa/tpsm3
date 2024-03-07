@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float value = 100;
+    public float enemyHealthValue = 100;
 
     public void DealDamage(float damage)
     {
-        value -= damage;
-        if (value <= 0) Destroy(gameObject);
+        enemyHealthValue -= damage;
+        if (enemyHealthValue <= 0) Destroy(gameObject);
     }
 }
