@@ -249,6 +249,22 @@ MonoBehaviour:
   gameplayUI: {fileID: 573162117}
   gameOverScreen: {fileID: 2091530081}
   maxHealth: 100
+--- !u!114 &97692578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97692570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2024e36276d6e42a946c3365632198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 60
+  caster: {fileID: 1629418356}
+  grenadePrefab: {fileID: 96092622607181213, guid: 17453af290a538740897a0227233c92d,
+    type: 3}
 --- !u!1001 &153849729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1332,6 +1348,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &1341269588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4605210418177410279, guid: 7381a18c7a6d1454298a414b8a44df95,
+    type: 3}
+  m_PrefabInstance: {fileID: 2117859918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347801528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1858,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599492302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1629418355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629418356}
+  m_Layer: 0
+  m_Name: GrenadeCaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629418356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629418355}
+  m_LocalRotation: {x: -0.11398349, y: 0, z: 0, w: 0.9934827}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1341269588}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -13.09, y: 0, z: 0}
 --- !u!1 &1648215333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +1996,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1707613399}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1.95
   m_Direction: 1
@@ -1961,7 +2013,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93baa8ba52b27047986b13fbd2537f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 100
+  enemyHealthValue: 100
+--- !u!54 &1707613406
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707613399}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1792579204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2898,7 @@ PrefabInstance:
     - target: {fileID: 4605210418579250465, guid: 7381a18c7a6d1454298a414b8a44df95,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -12.66
       objectReference: {fileID: 0}
     - target: {fileID: 4605210418579250465, guid: 7381a18c7a6d1454298a414b8a44df95,
         type: 3}
@@ -2872,6 +2940,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcquireChan
       objectReference: {fileID: 0}
+    - target: {fileID: 4605210418587038401, guid: 7381a18c7a6d1454298a414b8a44df95,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605210418587038401, guid: 7381a18c7a6d1454298a414b8a44df95,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9be7e3285ac97994190585ea7fcf205c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7381a18c7a6d1454298a414b8a44df95, type: 3}
 --- !u!1 &2124823654
